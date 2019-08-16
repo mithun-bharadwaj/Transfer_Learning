@@ -14,8 +14,8 @@ I've implemented a 5 layer network (3 convolutional layers and 2 fully connected
 The idea behind transfer learning is to use a network which has already been trained on a similar task and use the weights of that network for our task.
 
 There are 2 ways to go about this:
-1. Directly use the weights of the network without training it any further which just performs forward propagation with the weights of the model **(layer.trainable = False)**
-2. Download the weights of the model and let it train on the small datatset for a few epochs which updates the weights to perform better on this specific dataset **(layers.trainable = True)**
+1. Directly use the weights of the network without training it any further which just performs forward propagation with the weights of the model .
+2. Download the weights of the model and add a few custom layers on top of the pre-trained model and let it train on the small datatset for a few epochs to fine-tune the parameters to perform better on this specific task.
 
 I've used the Xception model for the transfer learning. This is a network developed by Francois Chollet (Google Inc) and has been trained on ImageNet.
 
